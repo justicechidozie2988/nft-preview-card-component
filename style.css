@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
 
 :root {
---Soft-blue: hsl(215, 51%, 70%);
---Cyan: hsl(178, 100%, 50%);  
---Very-dark-blue: hsl(217, 54%, 11%);
---Very-dark-blue: hsl(216, 50%, 16%);
---Very-dark-blue: hsl(215, 32%, 27%);
---White: hsl(0, 0%, 100%);
+  /* primary colors */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue: hsl(217, 54%, 11%);
+  --Very-dark-blue: hsl(216, 50%, 16%);
+  --Very-dark-blue: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
 }
 
 * {
@@ -16,112 +17,126 @@
 }
 
 body {
-  background-color: hsl(217, 54%, 11%);  
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background-color: hsl(217, 54%, 11%);
+  /* height: 100vh; */
 }
 
-.wrapper {
-  display: flex;
-  margin: auto;
-  margin-top: 60px;
-  background: var(--Very-dark-blue);
-  border-radius: 15px;
-  max-width: 400px;
-  padding: 20px;
-}
+/* styling main-container */
 
-.image-container {
+.main {
   position: relative;
-  display: flex;
+  margin: 70px auto;
+  background-color: hsl(215, 32%, 27%);
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* styling images */
+
+.img-container {
   cursor: pointer;
-  
+  position: relative;
+  display: inline-block;
 }
 
-.image {
-  width: 100%;
-  border-radius: 15px;
-}
-
-.icon-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 130px;
-  
-}
-
-.image-view {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(178, 100%, 50%);
-  border-radius: 15px;
-  opacity: 0;
-  transition: 1s;
-  width: 100%;
+.img {
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
   height: 100%;
+  display: block;
+  max-width: 300px;
+  width: 100%;
 }
 
-.image-container:hover .image-view {
-  opacity: 1;
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-h1 {
-  font-family: "open Sans";
-  font-size: 30px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #fff;
+/* image hover state */
+.img-container:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: hsl(178, 100%, 50%);
+  border-radius: 10px;
+  /* z-index: 1; */
+  opacity: 0.7;
 }
 
-p {
-  font-family: "open Sans";
+.anchor {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  margin-block-end: 15px;
+}
+
+.anchor:hover {
+  color: hsl(178, 100%, 50%);
+  opacity: 0.8;
+}
+
+/* text styling */
+.paragraph {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
   font-weight: 400;
-  font-size: 18px;
   color: hsl(215, 51%, 70%);
-  margin-bottom: 15px;
+  margin-block: 10px;
 }
 
-.flex-container {
+ul {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  align-items: center;
+  /* padding-inline: 10px; */
 }
 
-.left-spa {
+li {
+  list-style: none;
+  color: hsl(215, 51%, 70%);
+  margin-block: 10px;
+  /* margin-inline: 10px; */
+}
+
+ul li:nth-child(1) {
   color: hsl(178, 100%, 50%);
-  font-family: "open Sans";
-  font-size: 16px;
-  font-weight: 400;
-  padding-right: 40%;
-  
+}
+span {
+  margin-inline: 3px;
 }
 
-.right-spa {
-  font-family: "open Sans";
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--Soft-blue);
-  
+figure {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid hsl(215, 51%, 70%);
+  padding-block-start: 15px;
 }
 
- .avar {
+figure img {
   border-radius: 50%;
-  border: 2px solid #fff;
-  float: left;
-  margin-top: 10px;
-  width: 50px;
+  border: 1px solid hsl(0, 0%, 100%);
+  max-width: 50px;
+  width: 100%;
 }
-.para2 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 18px;
-  display: block;
-  color: var(--Soft-blue);
-  padding-right: 60px
+
+figcaption p {
+  color: hsl(215, 51%, 70%);
 }
-small {
-  color: #fff;
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
