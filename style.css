@@ -127,7 +127,7 @@ figure {
 figure img {
   border-radius: 50%;
   border: 1px solid hsl(0, 0%, 100%);
-  max-width: 100px;
+  max-width: 6.25rem;
   width: 100%;
 }
 
